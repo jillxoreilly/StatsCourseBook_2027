@@ -16,3 +16,6 @@ __pycache__/
 
 # VS Code settings
 .vscode/
+
+# Jupyter Book generated files
+_build/
