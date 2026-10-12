@@ -42,3 +42,6 @@ parse:
     - amsmath
     - dollarmath
 
+sphinx:
+  extra_extensions:
+    - jupyterbook_patches
