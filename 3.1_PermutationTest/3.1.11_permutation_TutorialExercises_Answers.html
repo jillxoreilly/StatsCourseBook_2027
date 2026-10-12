@@ -32,8 +32,19 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/index_patch.css?v=f6ce92ea" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_admonition_style.css?v=8627ce31" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_dropdown_style.css?v=f3461767" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_code_header_style.css?v=7d542921" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_sidebar_scroll.css?v=b9929681" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_margin.css?v=4a1e31aa" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_align_text_captions.css?v=29546296" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_align_code.css?v=719ffd7f" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_todo.css?v=75d6b386" />
+    <link rel="stylesheet" type="text/css" href="../_static/margin_patch.css?v=1aa379b9" />
+    <link rel="stylesheet" type="text/css" href="../_static/mathjax_patch.css?v=b2e2e4cc" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -51,14 +62,18 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/download_patch.js?v=75631000"></script>
+    <script src="../_static/fix_hash_jump.js?v=2aad3019"></script>
+    <script src="../_static/mathjax_patch.js?v=c73a562d"></script>
+    <script src="../_static/preserve_dropdown_state.js?v=d724701d"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"loader": {"load": ["ui/lazy"]}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="../_static/mathjax_patch.js?v=c73a562d"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '3.1_PermutationTest/3.1.11_permutation_TutorialExercises_Answers';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -920,8 +935,8 @@ n post = 61
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PermutationTestResult(statistic=0.7812255461336072, pvalue=9.999000099990002e-05, null_distribution=array([ 0.10960938, -0.0364112 ,  0.11463375, ...,  0.11510478,
-        0.11329915, -0.01325202]))
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PermutationTestResult(statistic=0.7812255461336072, pvalue=9.999000099990002e-05, null_distribution=array([-0.02385029,  0.09712698, -0.19562073, ...,  0.06588172,
+       -0.00029858,  0.08472308]))
 </pre></div>
 </div>
 </div>
@@ -1021,7 +1036,7 @@ n post = 61
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/03b891f74f52fff3dca68c77a875957a5a59a1136420d14597754ca37c88c21a.png" src="../_images/03b891f74f52fff3dca68c77a875957a5a59a1136420d14597754ca37c88c21a.png" />
+<img alt="../_images/e10ae94a610f476d7f981953182ddfb0b0b5878956fd511e338ae3206d0b9242.png" src="../_images/e10ae94a610f476d7f981953182ddfb0b0b5878956fd511e338ae3206d0b9242.png" />
 </div>
 </div>
 <p><strong>c) Carry out the test</strong></p>
@@ -1040,8 +1055,8 @@ n post = 61
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PermutationTestResult(statistic=3.9630672926447517, pvalue=0.10038996100389962, null_distribution=array([-0.46635368,  2.00250391,  1.13114241, ..., -0.17589984,
-        1.56682316, -0.32112676]))
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PermutationTestResult(statistic=3.9630672926447517, pvalue=0.0963903609639036, null_distribution=array([-0.61158059,  1.05852895,  2.83755869, ...,  1.42159624,
+       -0.28482003,  0.80438185]))
 </pre></div>
 </div>
 </div>
@@ -1128,7 +1143,7 @@ n post = 61
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ba5fdaece4d0f2b0b7bafd85d348d9bb93553df0fde4edf657a7e9a01b1fb8ee.png" src="../_images/ba5fdaece4d0f2b0b7bafd85d348d9bb93553df0fde4edf657a7e9a01b1fb8ee.png" />
+<img alt="../_images/7ed39da654506f1de2a5694c73010d13ed65a22557ba7b7190305efda43289a9.png" src="../_images/7ed39da654506f1de2a5694c73010d13ed65a22557ba7b7190305efda43289a9.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1163,8 +1178,8 @@ n post = 61
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PermutationTestResult(statistic=2.584717607973417, pvalue=9.999000099990002e-05, null_distribution=array([ 1.00996678,  0.41860465,  0.11295681, ..., -0.38538206,
-       -0.3255814 ,  0.7641196 ]))
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PermutationTestResult(statistic=2.584717607973417, pvalue=9.999000099990002e-05, null_distribution=array([ 0.08637874, -0.86378738,  0.67774086, ..., -0.59800664,
+       -0.94352159, -0.2192691 ]))
 </pre></div>
 </div>
 </div>
@@ -1295,7 +1310,7 @@ n post = 61
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/6ad8ee0a020e605fd1a0b7cfb8685e1215bbe60feee30254a921a5609928816f.png" src="../_images/6ad8ee0a020e605fd1a0b7cfb8685e1215bbe60feee30254a921a5609928816f.png" />
+<img alt="../_images/63e1bff7a1d3ec1442dd5a8413bfc8a24ce441f6fc3a30e41b27c55eecbf0f06.png" src="../_images/63e1bff7a1d3ec1442dd5a8413bfc8a24ce441f6fc3a30e41b27c55eecbf0f06.png" />
 </div>
 </div>
 <p><strong>c. Carry out the test</strong></p>
@@ -1313,8 +1328,8 @@ n post = 61
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PermutationTestResult(statistic=0.8040571480904846, pvalue=0.23917608239176083, null_distribution=array([-0.61562414, -0.20212474, -0.5742742 , ..., -0.20212474,
-        1.41052294,  2.26508838]))
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PermutationTestResult(statistic=0.8040571480904846, pvalue=0.24647535246475352, null_distribution=array([-0.89129041, -1.53910615,  0.45947431, ...,  0.03219159,
+       -2.24205513,  0.08732485]))
 </pre></div>
 </div>
 </div>

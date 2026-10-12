@@ -32,8 +32,19 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/index_patch.css?v=f6ce92ea" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_admonition_style.css?v=8627ce31" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_dropdown_style.css?v=f3461767" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_code_header_style.css?v=7d542921" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_sidebar_scroll.css?v=b9929681" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_margin.css?v=4a1e31aa" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_align_text_captions.css?v=29546296" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_align_code.css?v=719ffd7f" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_todo.css?v=75d6b386" />
+    <link rel="stylesheet" type="text/css" href="../_static/margin_patch.css?v=1aa379b9" />
+    <link rel="stylesheet" type="text/css" href="../_static/mathjax_patch.css?v=b2e2e4cc" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -51,14 +62,18 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/download_patch.js?v=75631000"></script>
+    <script src="../_static/fix_hash_jump.js?v=2aad3019"></script>
+    <script src="../_static/mathjax_patch.js?v=c73a562d"></script>
+    <script src="../_static/preserve_dropdown_state.js?v=d724701d"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"loader": {"load": ["ui/lazy"]}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="../_static/mathjax_patch.js?v=c73a562d"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '2.3_Sampling/2.3.5_SampleDataDistribution';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -823,29 +838,29 @@ document.write(`
   </thead>
   <tbody>
     <tr>
-      <th>5158</th>
-      <td>694910</td>
-      <td>22</td>
-    </tr>
-    <tr>
-      <th>741</th>
-      <td>337060</td>
-      <td>17</td>
-    </tr>
-    <tr>
-      <th>1614</th>
-      <td>281800</td>
-      <td>22</td>
-    </tr>
-    <tr>
-      <th>7999</th>
-      <td>368520</td>
+      <th>610</th>
+      <td>240310</td>
       <td>76</td>
     </tr>
     <tr>
-      <th>4438</th>
-      <td>894090</td>
-      <td>83</td>
+      <th>7570</th>
+      <td>126150</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <th>6821</th>
+      <td>962580</td>
+      <td>49</td>
+    </tr>
+    <tr>
+      <th>1200</th>
+      <td>267040</td>
+      <td>33</td>
+    </tr>
+    <tr>
+      <th>3636</th>
+      <td>282500</td>
+      <td>78</td>
     </tr>
     <tr>
       <th>...</th>
@@ -853,29 +868,29 @@ document.write(`
       <td>...</td>
     </tr>
     <tr>
-      <th>2307</th>
-      <td>672680</td>
-      <td>74</td>
+      <th>4497</th>
+      <td>396120</td>
+      <td>77</td>
     </tr>
     <tr>
-      <th>3089</th>
-      <td>566350</td>
-      <td>13</td>
+      <th>3922</th>
+      <td>617760</td>
+      <td>15</td>
     </tr>
     <tr>
-      <th>4575</th>
-      <td>834420</td>
-      <td>42</td>
+      <th>2196</th>
+      <td>482180</td>
+      <td>35</td>
     </tr>
     <tr>
-      <th>2048</th>
-      <td>206110</td>
-      <td>73</td>
+      <th>2847</th>
+      <td>967800</td>
+      <td>51</td>
     </tr>
     <tr>
-      <th>4670</th>
-      <td>167480</td>
-      <td>87</td>
+      <th>9428</th>
+      <td>354350</td>
+      <td>30</td>
     </tr>
   </tbody>
 </table>
@@ -901,7 +916,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/b0d042abedd3ff86a927c06c7e71d1c36a310dcd45646ef8ff73e06f82da10c0.png" src="../_images/b0d042abedd3ff86a927c06c7e71d1c36a310dcd45646ef8ff73e06f82da10c0.png" />
+<img alt="../_images/d6c3bf72c86c5bfc97ea078ecbce01dfa5ee4dde49523a993ad6a838bfb5fa3e.png" src="../_images/d6c3bf72c86c5bfc97ea078ecbce01dfa5ee4dde49523a993ad6a838bfb5fa3e.png" />
 </div>
 </div>
 <p>Hopefully we can see that the distribution within the sample resembles the shape of the distribution in the national sample, with two peaks, although somewhat noisier</p>
@@ -920,7 +935,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/8309883380dec652ee2df1f5b138b4aa52455a3f5fd00b85b652312dbe6bb46f.png" src="../_images/8309883380dec652ee2df1f5b138b4aa52455a3f5fd00b85b652312dbe6bb46f.png" />
+<img alt="../_images/fb0fdeddb607c9c2a3afeac821108e8156f47c2a8f1cb553d6d32b2300004c78.png" src="../_images/fb0fdeddb607c9c2a3afeac821108e8156f47c2a8f1cb553d6d32b2300004c78.png" />
 </div>
 </div>
 <p>Notice that we always manage to reproduce the bimodal shape, albeit with random variability.</p>
@@ -942,7 +957,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2d7f3c6dfe71652b801649f45051c1043b06f20eee263f567a053ac405768a67.png" src="../_images/2d7f3c6dfe71652b801649f45051c1043b06f20eee263f567a053ac405768a67.png" />
+<img alt="../_images/a63dc263691ce7a7ccc1afd72a445391b384d551dc7d0a86600177f2be74f6f3.png" src="../_images/a63dc263691ce7a7ccc1afd72a445391b384d551dc7d0a86600177f2be74f6f3.png" />
 </div>
 </div>
 <p>You can see two things:</p>
@@ -973,7 +988,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/9648db07734cd886a14187ff7d6204e889fbc5c6a0828c4f6e1d7bc23abd5775.png" src="../_images/9648db07734cd886a14187ff7d6204e889fbc5c6a0828c4f6e1d7bc23abd5775.png" />
+<img alt="../_images/890108edff51047ba61a46156ab296127194c5810607c5550c56040c1156c018.png" src="../_images/890108edff51047ba61a46156ab296127194c5810607c5550c56040c1156c018.png" />
 </div>
 </div>
 </section>

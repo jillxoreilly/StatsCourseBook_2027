@@ -32,8 +32,19 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/index_patch.css?v=f6ce92ea" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_admonition_style.css?v=8627ce31" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_dropdown_style.css?v=f3461767" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_code_header_style.css?v=7d542921" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_sidebar_scroll.css?v=b9929681" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_margin.css?v=4a1e31aa" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_align_text_captions.css?v=29546296" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_align_code.css?v=719ffd7f" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_todo.css?v=75d6b386" />
+    <link rel="stylesheet" type="text/css" href="../_static/margin_patch.css?v=1aa379b9" />
+    <link rel="stylesheet" type="text/css" href="../_static/mathjax_patch.css?v=b2e2e4cc" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -51,14 +62,18 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/download_patch.js?v=75631000"></script>
+    <script src="../_static/fix_hash_jump.js?v=2aad3019"></script>
+    <script src="../_static/mathjax_patch.js?v=c73a562d"></script>
+    <script src="../_static/preserve_dropdown_state.js?v=d724701d"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"loader": {"load": ["ui/lazy"]}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="../_static/mathjax_patch.js?v=c73a562d"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '4.2_Regression2/regression2_TutorialExercises_answers_LR';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -919,10 +934,10 @@ dtype: int64
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   54.53</td> 
 </tr>
 <tr>
-  <th>Date:</th>             <td>Fri, 02 Oct 2026</td> <th>  Prob (F-statistic):</th> <td>2.18e-13</td> 
+  <th>Date:</th>             <td>Mon, 12 Oct 2026</td> <th>  Prob (F-statistic):</th> <td>2.18e-13</td> 
 </tr>
 <tr>
-  <th>Time:</th>                 <td>16:32:24</td>     <th>  Log-Likelihood:    </th> <td> -5037.7</td> 
+  <th>Time:</th>                 <td>22:00:36</td>     <th>  Log-Likelihood:    </th> <td> -5037.7</td> 
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>  2155</td>      <th>  AIC:               </th> <td>1.008e+04</td>
@@ -1001,10 +1016,10 @@ dtype: int64
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   27.38</td> 
 </tr>
 <tr>
-  <th>Date:</th>             <td>Fri, 02 Oct 2026</td> <th>  Prob (F-statistic):</th> <td>1.81e-12</td> 
+  <th>Date:</th>             <td>Mon, 12 Oct 2026</td> <th>  Prob (F-statistic):</th> <td>1.81e-12</td> 
 </tr>
 <tr>
-  <th>Time:</th>                 <td>16:32:24</td>     <th>  Log-Likelihood:    </th> <td> -5037.6</td> 
+  <th>Time:</th>                 <td>22:00:36</td>     <th>  Log-Likelihood:    </th> <td> -5037.6</td> 
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>  2155</td>      <th>  AIC:               </th> <td>1.008e+04</td>
@@ -1109,10 +1124,10 @@ dtype: int64
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   65.77</td>
 </tr>
 <tr>
-  <th>Date:</th>             <td>Fri, 02 Oct 2026</td> <th>  Prob (F-statistic):</th> <td>1.82e-52</td>
+  <th>Date:</th>             <td>Mon, 12 Oct 2026</td> <th>  Prob (F-statistic):</th> <td>1.82e-52</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>16:32:24</td>     <th>  Log-Likelihood:    </th> <td> -4804.3</td>
+  <th>Time:</th>                 <td>22:00:36</td>     <th>  Log-Likelihood:    </th> <td> -4804.3</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>  2097</td>      <th>  AIC:               </th> <td>   9619.</td>
@@ -1200,10 +1215,10 @@ dtype: int64
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   65.77</td>
 </tr>
 <tr>
-  <th>Date:</th>             <td>Fri, 02 Oct 2026</td> <th>  Prob (F-statistic):</th> <td>1.82e-52</td>
+  <th>Date:</th>             <td>Mon, 12 Oct 2026</td> <th>  Prob (F-statistic):</th> <td>1.82e-52</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>16:32:24</td>     <th>  Log-Likelihood:    </th> <td> -4804.3</td>
+  <th>Time:</th>                 <td>22:00:36</td>     <th>  Log-Likelihood:    </th> <td> -4804.3</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>  2097</td>      <th>  AIC:               </th> <td>   9619.</td>
@@ -1300,10 +1315,10 @@ Run the code. What does it show?</p>
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   65.72</td>
 </tr>
 <tr>
-  <th>Date:</th>             <td>Fri, 02 Oct 2026</td> <th>  Prob (F-statistic):</th> <td>6.87e-64</td>
+  <th>Date:</th>             <td>Mon, 12 Oct 2026</td> <th>  Prob (F-statistic):</th> <td>6.87e-64</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>16:32:24</td>     <th>  Log-Likelihood:    </th> <td> -4775.5</td>
+  <th>Time:</th>                 <td>22:00:36</td>     <th>  Log-Likelihood:    </th> <td> -4775.5</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>  2097</td>      <th>  AIC:               </th> <td>   9563.</td>
@@ -1420,10 +1435,10 @@ Run the code. What does it show?</p>
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   20.77</td>
 </tr>
 <tr>
-  <th>Date:</th>             <td>Fri, 02 Oct 2026</td> <th>  Prob (F-statistic):</th> <td>1.71e-23</td>
+  <th>Date:</th>             <td>Mon, 12 Oct 2026</td> <th>  Prob (F-statistic):</th> <td>1.71e-23</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>16:32:24</td>     <th>  Log-Likelihood:    </th> <td> -3444.4</td>
+  <th>Time:</th>                 <td>22:00:36</td>     <th>  Log-Likelihood:    </th> <td> -3444.4</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>  1511</td>      <th>  AIC:               </th> <td>   6903.</td>
@@ -1491,7 +1506,7 @@ Run the code. What does it show?</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/87818d3d1b87c81c67e770d105d70009e76126879dd1a96971acba6aea2a3a7e.png" src="../_images/87818d3d1b87c81c67e770d105d70009e76126879dd1a96971acba6aea2a3a7e.png" />
+<img alt="../_images/6f0437ef32af67299daa66c4d9590c7ef4cf4d25244872836b320b63a172fb31.png" src="../_images/6f0437ef32af67299daa66c4d9590c7ef4cf4d25244872836b320b63a172fb31.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1502,7 +1517,7 @@ Run the code. What does it show?</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c07c0efca9a2909dc1a92df5824d5cb79b9ca76fec8db16e38b820b6fabbbbe9.png" src="../_images/c07c0efca9a2909dc1a92df5824d5cb79b9ca76fec8db16e38b820b6fabbbbe9.png" />
+<img alt="../_images/e5b35845c52171756d3b4fc3bec1d399210e96b19e59d7230fd144ba84d7ba47.png" src="../_images/e5b35845c52171756d3b4fc3bec1d399210e96b19e59d7230fd144ba84d7ba47.png" />
 </div>
 </div>
 <p>Interpret the results in your own words.</p>
@@ -1572,10 +1587,10 @@ Run the code. What does it show?</p>
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   52.93</td>
 </tr>
 <tr>
-  <th>Date:</th>             <td>Fri, 02 Oct 2026</td> <th>  Prob (F-statistic):</th> <td>7.49e-52</td>
+  <th>Date:</th>             <td>Mon, 12 Oct 2026</td> <th>  Prob (F-statistic):</th> <td>7.49e-52</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>16:32:25</td>     <th>  Log-Likelihood:    </th> <td> -4803.5</td>
+  <th>Time:</th>                 <td>22:00:36</td>     <th>  Log-Likelihood:    </th> <td> -4803.5</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>  2097</td>      <th>  AIC:               </th> <td>   9619.</td>

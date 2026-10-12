@@ -32,8 +32,19 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/index_patch.css?v=f6ce92ea" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_admonition_style.css?v=8627ce31" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_dropdown_style.css?v=f3461767" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_code_header_style.css?v=7d542921" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_sidebar_scroll.css?v=b9929681" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_margin.css?v=4a1e31aa" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_align_text_captions.css?v=29546296" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_align_code.css?v=719ffd7f" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_todo.css?v=75d6b386" />
+    <link rel="stylesheet" type="text/css" href="../_static/margin_patch.css?v=1aa379b9" />
+    <link rel="stylesheet" type="text/css" href="../_static/mathjax_patch.css?v=b2e2e4cc" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -51,6 +62,10 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/download_patch.js?v=75631000"></script>
+    <script src="../_static/fix_hash_jump.js?v=2aad3019"></script>
+    <script src="../_static/mathjax_patch.js?v=c73a562d"></script>
+    <script src="../_static/preserve_dropdown_state.js?v=d724701d"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -705,7 +720,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
 </pre></div>
 </div>
 </div>
@@ -758,16 +773,16 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TAILS
-HEADS
-TAILS
-TAILS
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HEADS
 HEADS
 TAILS
 HEADS
+TAILS
 HEADS
 HEADS
-HEADS
+TAILS
+TAILS
+TAILS
 </pre></div>
 </div>
 </div>
@@ -797,8 +812,8 @@ HEADS
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>heads array: [0. 1. 1. 0. 0. 0. 0. 1. 1. 1.]
-sum = 5.0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>heads array: [1. 1. 1. 0. 1. 1. 1. 0. 1. 1.]
+sum = 8.0
 </pre></div>
 </div>
 </div>
@@ -851,7 +866,7 @@ sum = 5.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/0c387cea2ec468e643d72c450cffefbd07f910a38c65f87a8020bb7decb78b79.png" src="../_images/0c387cea2ec468e643d72c450cffefbd07f910a38c65f87a8020bb7decb78b79.png" />
+<img alt="../_images/e78a73e5b6e9deae236a09559837dcdba18c9b2114c58248feb579cb417deb48.png" src="../_images/e78a73e5b6e9deae236a09559837dcdba18c9b2114c58248feb579cb417deb48.png" />
 </div>
 </div>
 <p>Indeed, the expected outcomes of 4,5,6 are more likely than the extremes!</p>
@@ -961,7 +976,7 @@ sum = 5.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/8fdbf6e0b8d160e14468bd3b252f5b0511c6b3c6d78827cecdce60733c68a399.png" src="../_images/8fdbf6e0b8d160e14468bd3b252f5b0511c6b3c6d78827cecdce60733c68a399.png" />
+<img alt="../_images/fec4ec2e8e53567cca62965ad115ba477bdcfbc06531d4dd783c930320c75c56.png" src="../_images/fec4ec2e8e53567cca62965ad115ba477bdcfbc06531d4dd783c930320c75c56.png" />
 </div>
 </div>
 <p>If you run the code block above a few times, you should see the simulated trajectory change each time</p>
@@ -1151,7 +1166,7 @@ sum = 5.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/cd005a25ff9af696430b10f0d0dfc08df4cf92aea73115c6316947ed6286ca40.png" src="../_images/cd005a25ff9af696430b10f0d0dfc08df4cf92aea73115c6316947ed6286ca40.png" />
+<img alt="../_images/91b49a5c37571ddfc7a29bb1cd6aae0ba76c33699f79474a33f2b242a19da632.png" src="../_images/91b49a5c37571ddfc7a29bb1cd6aae0ba76c33699f79474a33f2b242a19da632.png" />
 </div>
 </div>
 <p>The darker lines on the plot show where multiple balls have passed through the same path — these represent the most common trajectories.</p>
@@ -1173,7 +1188,7 @@ sum = 5.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/dfe83dd8a57d44b197ba01a083e290d98a3199f8cafe02faa9cf97ba0dc48b0f.png" src="../_images/dfe83dd8a57d44b197ba01a083e290d98a3199f8cafe02faa9cf97ba0dc48b0f.png" />
+<img alt="../_images/00ddd3769dc6af68b7ddf788e4c13211893efdb6b43acd0c053c1896eb346805.png" src="../_images/00ddd3769dc6af68b7ddf788e4c13211893efdb6b43acd0c053c1896eb346805.png" />
 </div>
 </div>
 </section>

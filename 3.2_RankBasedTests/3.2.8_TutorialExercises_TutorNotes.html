@@ -32,8 +32,19 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/index_patch.css?v=f6ce92ea" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_admonition_style.css?v=8627ce31" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_dropdown_style.css?v=f3461767" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_code_header_style.css?v=7d542921" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_sidebar_scroll.css?v=b9929681" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_margin.css?v=4a1e31aa" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_align_text_captions.css?v=29546296" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_align_code.css?v=719ffd7f" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_todo.css?v=75d6b386" />
+    <link rel="stylesheet" type="text/css" href="../_static/margin_patch.css?v=1aa379b9" />
+    <link rel="stylesheet" type="text/css" href="../_static/mathjax_patch.css?v=b2e2e4cc" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -51,14 +62,18 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/download_patch.js?v=75631000"></script>
+    <script src="../_static/fix_hash_jump.js?v=2aad3019"></script>
+    <script src="../_static/mathjax_patch.js?v=c73a562d"></script>
+    <script src="../_static/preserve_dropdown_state.js?v=d724701d"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"loader": {"load": ["ui/lazy"]}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="../_static/mathjax_patch.js?v=c73a562d"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '3.2_RankBasedTests/3.2.8_TutorialExercises_TutorNotes';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -951,8 +966,8 @@ The weight of trays of peaches were compared using a Rank Sum test. Farmer MacDo
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PermutationTestResult(statistic=0.22062500000000007, pvalue=0.0494, null_distribution=array([ 0.183625, -0.134375,  0.191875, ..., -0.111875, -0.211625,
-       -0.141875]))
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PermutationTestResult(statistic=0.22062500000000007, pvalue=0.0458, null_distribution=array([ 0.185125, -0.107875,  0.049125, ..., -0.133875,  0.059375,
+       -0.358875]))
 </pre></div>
 </div>
 </div>
@@ -1152,7 +1167,7 @@ You could add the line of equality (line x=y) to the graph so we can see whether
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/103d968c349bde13877063381b340047e1f65ae0736fd90597bbb8098995a7fb.png" src="../_images/103d968c349bde13877063381b340047e1f65ae0736fd90597bbb8098995a7fb.png" />
+<img alt="../_images/45decb7ad598bfe715f4510e7c65ebf068783faf6710dd8aafb93027b8e962aa.png" src="../_images/45decb7ad598bfe715f4510e7c65ebf068783faf6710dd8aafb93027b8e962aa.png" />
 </div>
 </div>
 <p>e) Conduct a suitable rank-based non-parametric test of VitalVit’s claim</p>
@@ -1354,8 +1369,8 @@ You could add the line of equality (line x=y) to the graph so we can see whether
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PermutationTestResult(statistic=1.320590909090907, pvalue=0.003, null_distribution=array([-0.14904545,  0.02240909, -0.09286364, ..., -0.13622727,
-       -1.10395455,  0.57568182]))
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PermutationTestResult(statistic=1.320590909090907, pvalue=0.0021, null_distribution=array([ 0.42277273, -0.08859091, -0.34922727, ..., -0.27213636,
+       -0.78377273, -0.29231818]))
 </pre></div>
 </div>
 </div>
@@ -1488,7 +1503,7 @@ You could add the line of equality (line x=y) to the graph so we can see whether
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2e93c0301a343557648be57a53008a81ede1d5ba6b652d73de177e4755a2abeb.png" src="../_images/2e93c0301a343557648be57a53008a81ede1d5ba6b652d73de177e4755a2abeb.png" />
+<img alt="../_images/a206ba89f982468dd20f81bd292b39d02f6935157657d41b30586f63f12077bc.png" src="../_images/a206ba89f982468dd20f81bd292b39d02f6935157657d41b30586f63f12077bc.png" />
 </div>
 </div>
 <p><strong>c. Carry out a suitable rank-based non-parametric test of the hypothesis that men own more socks than women</strong></p>
@@ -1512,8 +1527,8 @@ You could add the line of equality (line x=y) to the graph so we can see whether
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PermutationTestResult(statistic=4.571428571428571, pvalue=0.006, null_distribution=array([ 1.71428571,  1.14285714, -1.57142857, ...,  0.71428571,
-        1.14285714, -2.28571429]))
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PermutationTestResult(statistic=4.571428571428571, pvalue=0.0049, null_distribution=array([ 2.71428571, -1.        , -1.28571429, ...,  2.14285714,
+        1.        ,  0.42857143]))
 </pre></div>
 </div>
 </div>

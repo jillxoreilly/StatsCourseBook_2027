@@ -32,8 +32,19 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/index_patch.css?v=f6ce92ea" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_admonition_style.css?v=8627ce31" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_dropdown_style.css?v=f3461767" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_code_header_style.css?v=7d542921" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_sidebar_scroll.css?v=b9929681" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_margin.css?v=4a1e31aa" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_align_text_captions.css?v=29546296" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_align_code.css?v=719ffd7f" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_todo.css?v=75d6b386" />
+    <link rel="stylesheet" type="text/css" href="../_static/margin_patch.css?v=1aa379b9" />
+    <link rel="stylesheet" type="text/css" href="../_static/mathjax_patch.css?v=b2e2e4cc" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -51,14 +62,18 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/download_patch.js?v=75631000"></script>
+    <script src="../_static/fix_hash_jump.js?v=2aad3019"></script>
+    <script src="../_static/mathjax_patch.js?v=c73a562d"></script>
+    <script src="../_static/preserve_dropdown_state.js?v=d724701d"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"loader": {"load": ["ui/lazy"]}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="../_static/mathjax_patch.js?v=c73a562d"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '4.4_Regression4/regression4_TutorialExercises_answers';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -911,10 +926,10 @@ Residual   1926.0  4671.680111    2.425587         NaN           NaN
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   13.94</td>
 </tr>
 <tr>
-  <th>Date:</th>             <td>Fri, 02 Oct 2026</td> <th>  Prob (F-statistic):</th> <td>9.75e-07</td>
+  <th>Date:</th>             <td>Mon, 12 Oct 2026</td> <th>  Prob (F-statistic):</th> <td>9.75e-07</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>16:33:05</td>     <th>  Log-Likelihood:    </th> <td> -3794.4</td>
+  <th>Time:</th>                 <td>22:01:19</td>     <th>  Log-Likelihood:    </th> <td> -3794.4</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>  1932</td>      <th>  AIC:               </th> <td>   7595.</td>
@@ -985,10 +1000,10 @@ Residual   1926.0  4671.680111    2.425587         NaN           NaN
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   95.51</td>
 </tr>
 <tr>
-  <th>Date:</th>             <td>Fri, 02 Oct 2026</td> <th>  Prob (F-statistic):</th> <td>4.62e-90</td>
+  <th>Date:</th>             <td>Mon, 12 Oct 2026</td> <th>  Prob (F-statistic):</th> <td>4.62e-90</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>16:33:05</td>     <th>  Log-Likelihood:    </th> <td> -3594.3</td>
+  <th>Time:</th>                 <td>22:01:19</td>     <th>  Log-Likelihood:    </th> <td> -3594.3</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>  1932</td>      <th>  AIC:               </th> <td>   7201.</td>
@@ -1115,7 +1130,7 @@ Residual   1926.0  4671.680111    2.425587         NaN           NaN
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/ft/hqqrzz3d29xfyct7ct4630x00000gt/T/ipykernel_51374/1113143029.py:6: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise in a future error of pandas. Value &#39;under 30&#39; has dtype incompatible with float64, please explicitly cast to a compatible dtype first.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/ft/hqqrzz3d29xfyct7ct4630x00000gt/T/ipykernel_44659/1113143029.py:6: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise in a future error of pandas. Value &#39;under 30&#39; has dtype incompatible with float64, please explicitly cast to a compatible dtype first.
   data.loc[data[&#39;age&#39;].isin(range(0, 30)), &#39;age4&#39;] = &quot;under 30&quot;
 </pre></div>
 </div>
@@ -1302,7 +1317,7 @@ Residual        1920.0  5622.002386   2.928126        NaN           NaN
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;age4&#39;, ylabel=&#39;ladder&#39;&gt;
 </pre></div>
 </div>
-<img alt="../_images/5975ae21fab453168922c273692dc15206a1c0d6b6bb5fdcd93fe4d098c08e4e.png" src="../_images/5975ae21fab453168922c273692dc15206a1c0d6b6bb5fdcd93fe4d098c08e4e.png" />
+<img alt="../_images/0aa3386939ce09a959737845d9c84ecbf7b63acd77f12d5f8635bd70c4cf9580.png" src="../_images/0aa3386939ce09a959737845d9c84ecbf7b63acd77f12d5f8635bd70c4cf9580.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1337,7 +1352,7 @@ Residual    1924.0  4505.993641    2.341993         NaN           NaN
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;age4&#39;, ylabel=&#39;ladder&#39;&gt;
 </pre></div>
 </div>
-<img alt="../_images/1976f289ccd9b5a7c8b8c681127a5140e4cfe033918e4c61409105f2c7d4c870.png" src="../_images/1976f289ccd9b5a7c8b8c681127a5140e4cfe033918e4c61409105f2c7d4c870.png" />
+<img alt="../_images/0cf114dfdb3e17d7977a5726c958f1e447c91da0ddc3ce8d992af04d04e7b844.png" src="../_images/0cf114dfdb3e17d7977a5726c958f1e447c91da0ddc3ce8d992af04d04e7b844.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1348,10 +1363,10 @@ Residual    1924.0  4505.993641    2.341993         NaN           NaN
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x304edbcd0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x304fc2c50&gt;
 </pre></div>
 </div>
-<img alt="../_images/9072cebb88e4f32b82bc7f4e89485da31afece2a65664ef4ca187a1ce3c14a68.png" src="../_images/9072cebb88e4f32b82bc7f4e89485da31afece2a65664ef4ca187a1ce3c14a68.png" />
+<img alt="../_images/23201e9b80f21a13790d6cb2fd7a2bc350c7d2036ac0ac83234ef7fda1eaa4f5.png" src="../_images/23201e9b80f21a13790d6cb2fd7a2bc350c7d2036ac0ac83234ef7fda1eaa4f5.png" />
 </div>
 </div>
 </section>

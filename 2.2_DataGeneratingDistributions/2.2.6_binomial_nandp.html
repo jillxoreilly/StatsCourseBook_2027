@@ -32,8 +32,19 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/index_patch.css?v=f6ce92ea" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_admonition_style.css?v=8627ce31" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_dropdown_style.css?v=f3461767" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_code_header_style.css?v=7d542921" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_sidebar_scroll.css?v=b9929681" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_margin.css?v=4a1e31aa" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_align_text_captions.css?v=29546296" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_align_code.css?v=719ffd7f" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_todo.css?v=75d6b386" />
+    <link rel="stylesheet" type="text/css" href="../_static/margin_patch.css?v=1aa379b9" />
+    <link rel="stylesheet" type="text/css" href="../_static/mathjax_patch.css?v=b2e2e4cc" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -51,14 +62,18 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/download_patch.js?v=75631000"></script>
+    <script src="../_static/fix_hash_jump.js?v=2aad3019"></script>
+    <script src="../_static/mathjax_patch.js?v=c73a562d"></script>
+    <script src="../_static/preserve_dropdown_state.js?v=d724701d"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"loader": {"load": ["ui/lazy"]}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="../_static/mathjax_patch.js?v=c73a562d"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '2.2_DataGeneratingDistributions/2.2.6_binomial_nandp';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -695,7 +710,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.03393087728020816
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.2959135892849487
 is it a hit?:            0
 </pre></div>
 </div>
@@ -725,7 +740,7 @@ is it a hit?:            0
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/67177dee9bb1cf4c70615ab816ecc0033410361abfd039295d364d4b5ab61c4c.png" src="../_images/67177dee9bb1cf4c70615ab816ecc0033410361abfd039295d364d4b5ab61c4c.png" />
+<img alt="../_images/d64a2ee84cff5e4ba5fdf05a2eb383fb74919505a09e12f0a5a1f30a04aac22c.png" src="../_images/d64a2ee84cff5e4ba5fdf05a2eb383fb74919505a09e12f0a5a1f30a04aac22c.png" />
 </div>
 </div>
 <p>What if we change <span class="math notranslate nohighlight">\(p\)</span> to be 0.7 instead?</p>
@@ -746,7 +761,7 @@ is it a hit?:            0
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/149fc5633c0f4b278a886d2e0514da05a5ea4a5c4129fbb9ce77e2101256c724.png" src="../_images/149fc5633c0f4b278a886d2e0514da05a5ea4a5c4129fbb9ce77e2101256c724.png" />
+<img alt="../_images/c57f60134eec5b0038327a879f2a9cb56223c40f22f4262d6c1e9aeebdf00640.png" src="../_images/c57f60134eec5b0038327a879f2a9cb56223c40f22f4262d6c1e9aeebdf00640.png" />
 </div>
 </div>
 <p>You should notice after modifying the simulation so that <span class="math notranslate nohighlight">\(p=0.7\)</span>:</p>
@@ -779,7 +794,7 @@ is it a hit?:            0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mean(k) = 7.0163
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mean(k) = 6.9926
 n*p = 7.0
 </pre></div>
 </div>
@@ -809,7 +824,7 @@ n*p = 7.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/12862142455cb34794c93abee12181c9c05e3257d16ac4e4062a248f2c3449b8.png" src="../_images/12862142455cb34794c93abee12181c9c05e3257d16ac4e4062a248f2c3449b8.png" />
+<img alt="../_images/67ded75cc8b2fdc76d728e451baba320f7d1f34b4835701b5b408d0edb9a4693.png" src="../_images/67ded75cc8b2fdc76d728e451baba320f7d1f34b4835701b5b408d0edb9a4693.png" />
 </div>
 </div>
 <p>We can see that the peak of the histogram is where we expect (the most common value of <span class="math notranslate nohighlight">\(k\)</span> is around 50, which matches the theoretical mean <span class="math notranslate nohighlight">\(np\)</span>). However, notice that the spread of the histogram is now narrower relative to the possible range of <span class="math notranslate nohighlight">\(k\)</span> (i.e., from 0 to <span class="math notranslate nohighlight">\(n\)</span>) compared to when our value of $n was smaller.</p>
@@ -838,7 +853,7 @@ n*p = 7.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>std(k) = 4.991136780333715
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>std(k) = 5.041911443093779
 sqrt(npq) = 5.0
 </pre></div>
 </div>
@@ -885,7 +900,7 @@ sqrt(npq) = 5.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ceaf68f5853c2b8ca06182a877b185d8d2a1f83027ae4d3777c4a9e6bcdfb1a5.png" src="../_images/ceaf68f5853c2b8ca06182a877b185d8d2a1f83027ae4d3777c4a9e6bcdfb1a5.png" />
+<img alt="../_images/4974b6c147476f2f637ff79180f547e349855470e462826c825fd3d6ccc888f5.png" src="../_images/4974b6c147476f2f637ff79180f547e349855470e462826c825fd3d6ccc888f5.png" />
 </div>
 </div>
 </section>

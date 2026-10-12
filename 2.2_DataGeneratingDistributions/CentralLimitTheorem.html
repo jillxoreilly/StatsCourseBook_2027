@@ -32,8 +32,19 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/index_patch.css?v=f6ce92ea" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_admonition_style.css?v=8627ce31" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_dropdown_style.css?v=f3461767" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_code_header_style.css?v=7d542921" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_sidebar_scroll.css?v=b9929681" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_margin.css?v=4a1e31aa" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_align_text_captions.css?v=29546296" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_align_code.css?v=719ffd7f" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_todo.css?v=75d6b386" />
+    <link rel="stylesheet" type="text/css" href="../_static/margin_patch.css?v=1aa379b9" />
+    <link rel="stylesheet" type="text/css" href="../_static/mathjax_patch.css?v=b2e2e4cc" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -51,14 +62,18 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/download_patch.js?v=75631000"></script>
+    <script src="../_static/fix_hash_jump.js?v=2aad3019"></script>
+    <script src="../_static/mathjax_patch.js?v=c73a562d"></script>
+    <script src="../_static/preserve_dropdown_state.js?v=d724701d"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"loader": {"load": ["ui/lazy"]}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="../_static/mathjax_patch.js?v=c73a562d"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '2.2_DataGeneratingDistributions/CentralLimitTheorem';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -810,11 +825,11 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[77 31 50 41 23 79 34 79 32 20 50 28 79 73 88 34 28 76 69 13 83 76 53 79
- 37 15 78 29 33 17 48 23 84 87 77 30 76 28 69 58 27 16 72 75 43 84 19 51
- 77 14 76 75 50 32 15 77 89 37 79 46 24 75 20 34 50 68 50 84 73 84 79 27
- 39 23 75 31 65 71 23 24 83 76 80 72 23 29 88 26 22 34 20 31 27 76 24 17
- 73 70 52 76]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[25 79 27 82 43 78 80 77 39 21 30 91 82 34 43 41 34 21 80 70 32 76 31 27
+ 43 82 17 55 81 79 24 45 79 74 88 75 75 27 25 16 16 40 67 80 13 38 52 32
+ 45 21 46 17 37 76 38 24 47 76 35 51 52 35 13 38 79  9 10 35 32 10 40 21
+ 33 75 78 86 39 41  9 31 31 14 42 10 79 72 79 30 35 85 77 74 28 35 70 42
+ 38 52 38 77]
 </pre></div>
 </div>
 </div>
@@ -832,7 +847,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/4736f36c3c231a8b55e2ceb2cd52f996b75e936bb1c9f7d31c4423cb523ee5cf.png" src="../_images/4736f36c3c231a8b55e2ceb2cd52f996b75e936bb1c9f7d31c4423cb523ee5cf.png" />
+<img alt="../_images/9ae84b9ffafe0ac322981db5f46977691abc91ba5f6b287d3cc2e1fd7a686efc.png" src="../_images/9ae84b9ffafe0ac322981db5f46977691abc91ba5f6b287d3cc2e1fd7a686efc.png" />
 </div>
 </div>
 <p>Hopefully we can see that the distribution within the sample resembles the shape of the distribution in the national sample, with two peaks, although somewhat noisier</p>
@@ -852,7 +867,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/6dcc3ca20320e450572baed8fc7418348ebbf94d1c72da9912206cfc7628388d.png" src="../_images/6dcc3ca20320e450572baed8fc7418348ebbf94d1c72da9912206cfc7628388d.png" />
+<img alt="../_images/c2116ae3281be6729b8f818c593edeadc45dc3e6ed78325d4da653e1811d0c6b.png" src="../_images/c2116ae3281be6729b8f818c593edeadc45dc3e6ed78325d4da653e1811d0c6b.png" />
 </div>
 </div>
 <p>Notice that we always manage to reproduce the bimodal shape, albeit with random variability.</p>
@@ -903,7 +918,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;sample mean&#39;)
 </pre></div>
 </div>
-<img alt="../_images/3286ffe0f5183e8e238c87c540b77fb1cc08b154d1b26dbbd02b36fb03864871.png" src="../_images/3286ffe0f5183e8e238c87c540b77fb1cc08b154d1b26dbbd02b36fb03864871.png" />
+<img alt="../_images/ca25c92042068753b705e0e8d614c4392db9622a2580767999e5099bfd6c0be0.png" src="../_images/ca25c92042068753b705e0e8d614c4392db9622a2580767999e5099bfd6c0be0.png" />
 </div>
 </div>
 <p>The distribution of sample means is approximately normal.</p>
@@ -917,7 +932,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>49.882130000000004
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>49.856587
 </pre></div>
 </div>
 </div>
@@ -934,7 +949,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.4809443047154445
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.440598250722761
 </pre></div>
 </div>
 </div>
@@ -966,7 +981,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sd of sampling distribution (from simulation) = 2.4809443047154445
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sd of sampling distribution (from simulation) = 2.440598250722761
 SEM from the formula = 2.479272056187636
 </pre></div>
 </div>
@@ -1007,7 +1022,7 @@ SEM from the formula = 2.479272056187636
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/0ea92a3a4fdea6166c21ba4c34a5583d59e88d36d052a4286f621a97be3428b7.png" src="../_images/0ea92a3a4fdea6166c21ba4c34a5583d59e88d36d052a4286f621a97be3428b7.png" />
+<img alt="../_images/8939c4bb8aee658808ed5ed21f72035e61a86f483373805546963857ff12cb2e.png" src="../_images/8939c4bb8aee658808ed5ed21f72035e61a86f483373805546963857ff12cb2e.png" />
 </div>
 </div>
 </section>
@@ -1034,7 +1049,7 @@ SEM from the formula = 2.479272056187636
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/81256ca520620cecbff6c8e5ee82575e4bfe547a96316932cea713d267472d22.png" src="../_images/81256ca520620cecbff6c8e5ee82575e4bfe547a96316932cea713d267472d22.png" />
+<img alt="../_images/345f93115eca99c25635928c8dc1fb9cd0d8c780953a4849278c7a2651ec012c.png" src="../_images/345f93115eca99c25635928c8dc1fb9cd0d8c780953a4849278c7a2651ec012c.png" />
 </div>
 </div>
 <p>Now we make our predicted normal sampling distribution of the mean.</p>
@@ -1087,7 +1102,7 @@ SEM from the formula = 2.479272056187636
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
 </pre></div>
 </div>
-<img alt="../_images/b9eebed622d6cfddbc5c3d85f5e4715a1233f858a930a955fd635cc45aab038b.png" src="../_images/b9eebed622d6cfddbc5c3d85f5e4715a1233f858a930a955fd635cc45aab038b.png" />
+<img alt="../_images/3596ad6295389e0f2c6123453421dcc75359df65274b1577aba7302fa1cc95e0.png" src="../_images/3596ad6295389e0f2c6123453421dcc75359df65274b1577aba7302fa1cc95e0.png" />
 </div>
 </div>
 <p>This is not a bad match!</p>
@@ -1116,7 +1131,10 @@ SEM from the formula = 2.479272056187636
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>proportion of sample means greater than 55.1 = 0.0165 or 1.6500000000000001%
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>proportion of sample means greater than 55.1 = 0.0162 or 1.6199999999999999%
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>

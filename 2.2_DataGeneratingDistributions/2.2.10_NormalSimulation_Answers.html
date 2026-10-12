@@ -32,8 +32,19 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/index_patch.css?v=f6ce92ea" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_admonition_style.css?v=8627ce31" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_dropdown_style.css?v=f3461767" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_code_header_style.css?v=7d542921" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_sidebar_scroll.css?v=b9929681" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_margin.css?v=4a1e31aa" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_align_text_captions.css?v=29546296" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_align_code.css?v=719ffd7f" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_todo.css?v=75d6b386" />
+    <link rel="stylesheet" type="text/css" href="../_static/margin_patch.css?v=1aa379b9" />
+    <link rel="stylesheet" type="text/css" href="../_static/mathjax_patch.css?v=b2e2e4cc" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -51,14 +62,18 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/download_patch.js?v=75631000"></script>
+    <script src="../_static/fix_hash_jump.js?v=2aad3019"></script>
+    <script src="../_static/mathjax_patch.js?v=c73a562d"></script>
+    <script src="../_static/preserve_dropdown_state.js?v=d724701d"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"loader": {"load": ["ui/lazy"]}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="../_static/mathjax_patch.js?v=c73a562d"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '2.2_DataGeneratingDistributions/2.2.10_NormalSimulation_Answers';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -702,7 +717,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/943f32cd0725b7b11b4570d75ce56eb52f14bd48e9d14877518b8c51c06ae900.png" src="../_images/943f32cd0725b7b11b4570d75ce56eb52f14bd48e9d14877518b8c51c06ae900.png" />
+<img alt="../_images/79cd05955ab2df8bcb479fef68b20ae1c8194d13ea4cdfdc9da299e3fe59bed0.png" src="../_images/79cd05955ab2df8bcb479fef68b20ae1c8194d13ea4cdfdc9da299e3fe59bed0.png" />
 </div>
 </div>
 <ul>
@@ -853,7 +868,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/1b793fe997fd10c1f0adcac46cf302e30453431f0b81279f50663927bb57d053.png" src="../_images/1b793fe997fd10c1f0adcac46cf302e30453431f0b81279f50663927bb57d053.png" />
+<img alt="../_images/b22162031c43dfb9a2ef500ef0fca7b791cb9cfc9dfcee4866dd2a5a2ef89287.png" src="../_images/b22162031c43dfb9a2ef500ef0fca7b791cb9cfc9dfcee4866dd2a5a2ef89287.png" />
 </div>
 </div>
 <p>To overlay the normal curve from <code class="docutils literal notranslate"><span class="pre">stats.norm.pdf()</span></code>  on the histogram we will need to multiply the <span class="math notranslate nohighlight">\(y\)</span> values by 10000:</p>
@@ -872,7 +887,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/67adf43cbebd2603d56d67bdf2a21ea2cf27a3233bf09b7fe9aec96a2d1c977b.png" src="../_images/67adf43cbebd2603d56d67bdf2a21ea2cf27a3233bf09b7fe9aec96a2d1c977b.png" />
+<img alt="../_images/c585c13116623cb62635781063628bb1a4d72d95317e9675ee9f7c81452e3473.png" src="../_images/c585c13116623cb62635781063628bb1a4d72d95317e9675ee9f7c81452e3473.png" />
 </div>
 </div>
 </section>
@@ -895,7 +910,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/8a3b7d0c14ff023e90e57ac91b58d9d8121e12c3609f1245b8b1efd7158dab34.png" src="../_images/8a3b7d0c14ff023e90e57ac91b58d9d8121e12c3609f1245b8b1efd7158dab34.png" />
+<img alt="../_images/b51adf8362ef352d83f209a7f6851edc51435f40fbaeaf0b63659f807b615f2f.png" src="../_images/b51adf8362ef352d83f209a7f6851edc51435f40fbaeaf0b63659f807b615f2f.png" />
 </div>
 </div>
 <p>If we want to know what proportion of women are over 180cm (6’) tall, we can work it out using the CDF - the proportion <em>greater than</em> 180cm tall is 1-CDF(180)</p>

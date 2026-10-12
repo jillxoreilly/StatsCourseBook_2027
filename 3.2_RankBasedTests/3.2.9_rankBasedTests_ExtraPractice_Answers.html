@@ -32,8 +32,19 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/index_patch.css?v=f6ce92ea" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_admonition_style.css?v=8627ce31" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_dropdown_style.css?v=f3461767" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_code_header_style.css?v=7d542921" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_sidebar_scroll.css?v=b9929681" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_margin.css?v=4a1e31aa" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_align_text_captions.css?v=29546296" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_align_code.css?v=719ffd7f" />
+    <link rel="stylesheet" type="text/css" href="../_static/fix_todo.css?v=75d6b386" />
+    <link rel="stylesheet" type="text/css" href="../_static/margin_patch.css?v=1aa379b9" />
+    <link rel="stylesheet" type="text/css" href="../_static/mathjax_patch.css?v=b2e2e4cc" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -51,6 +62,10 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/download_patch.js?v=75631000"></script>
+    <script src="../_static/fix_hash_jump.js?v=2aad3019"></script>
+    <script src="../_static/mathjax_patch.js?v=c73a562d"></script>
+    <script src="../_static/preserve_dropdown_state.js?v=d724701d"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -1107,7 +1122,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x304b34910&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x3028d9990&gt;]
 </pre></div>
 </div>
 <img alt="../_images/4a7d767027a5b899a906cfbdf7c8e9d6ef43e3d29ea1cd61fa1b3ecf672bcfb0.png" src="../_images/4a7d767027a5b899a906cfbdf7c8e9d6ef43e3d29ea1cd61fa1b3ecf672bcfb0.png" />
@@ -1264,8 +1279,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PermutationTestResult(statistic=-3.6875146133206305, pvalue=9.999000099990002e-05, null_distribution=array([-0.83296916, -0.03612175,  1.36024189, ..., -0.84751461,
-        0.70131788, -0.70131788]))
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PermutationTestResult(statistic=-3.6875146133206305, pvalue=9.999000099990002e-05, null_distribution=array([ 0.88024189,  1.3784237 , -0.24777303, ..., -0.1815763 ,
+        0.30884902,  0.31222697]))
 </pre></div>
 </div>
 </div>
@@ -1279,7 +1294,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/064825dba7357c10f2b41dd5d740ff9e9312e9c3803da8c6daa8733f0015da1d.png" src="../_images/064825dba7357c10f2b41dd5d740ff9e9312e9c3803da8c6daa8733f0015da1d.png" />
+<img alt="../_images/71f4209f2b998c5b9c9c2c2ea1a1656f9bfec27e0edafdeabc77eef2d0d0ec46.png" src="../_images/71f4209f2b998c5b9c9c2c2ea1a1656f9bfec27e0edafdeabc77eef2d0d0ec46.png" />
 </div>
 </div>
 </section>
@@ -1298,7 +1313,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;BeforeLunchScore&#39;, ylabel=&#39;AfterLunchScore&#39;&gt;
 </pre></div>
 </div>
-<img alt="../_images/4c5af4733a3bdb22b1d035f584b27fa27e7b9aa9530fb8a61f60638006d3af6d.png" src="../_images/4c5af4733a3bdb22b1d035f584b27fa27e7b9aa9530fb8a61f60638006d3af6d.png" />
+<img alt="../_images/2e34af2b11da77fc6945d15bcdf3c1216ce1ea684a479d299a520a2421823afe.png" src="../_images/2e34af2b11da77fc6945d15bcdf3c1216ce1ea684a479d299a520a2421823afe.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1328,8 +1343,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PermutationTestResult(statistic=0.8007124172606844, pvalue=9.999000099990002e-05, null_distribution=array([-0.12995842,  0.05462944,  0.00752392, ...,  0.14525436,
-       -0.0166761 , -0.14522674]))
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PermutationTestResult(statistic=0.8007124172606844, pvalue=9.999000099990002e-05, null_distribution=array([-0.08972441, -0.06331516,  0.11941915, ...,  0.18483731,
+        0.19132945, -0.24578111]))
 </pre></div>
 </div>
 </div>
@@ -1343,7 +1358,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/bf5b4505acf3c60e691f940a0ba95c02f9adbba80b003132bd9ce869c1bc4bb5.png" src="../_images/bf5b4505acf3c60e691f940a0ba95c02f9adbba80b003132bd9ce869c1bc4bb5.png" />
+<img alt="../_images/ec720aacd472b8299aa16131bf8daa9f4bc7c4e0bf2590dc91c086e8481d223f.png" src="../_images/ec720aacd472b8299aa16131bf8daa9f4bc7c4e0bf2590dc91c086e8481d223f.png" />
 </div>
 </div>
 <section id="does-meat-vs-veg-lunch-matter">
@@ -1477,8 +1492,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PermutationTestResult(statistic=-1.0115407800943004, pvalue=0.698930106989301, null_distribution=array([ 1.43802096,  0.71468205, -0.22041538, ..., -4.1511219 ,
-        2.26003183, -0.04754621]))
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PermutationTestResult(statistic=-1.0115407800943004, pvalue=0.6959304069593041, null_distribution=array([-0.56416538,  1.93175853, -3.61955708, ...,  1.79130006,
+       -2.78412578, -1.34881212]))
 </pre></div>
 </div>
 </div>
@@ -1492,7 +1507,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/dd8f75ff4b5a59d09599ec75761f9e2d1c68a4721dc93e8dcf6e9db216713a1d.png" src="../_images/dd8f75ff4b5a59d09599ec75761f9e2d1c68a4721dc93e8dcf6e9db216713a1d.png" />
+<img alt="../_images/3070c510497021fbbad20189d909e00eaf68354079e7075d9a98b11d971a3c7f.png" src="../_images/3070c510497021fbbad20189d909e00eaf68354079e7075d9a98b11d971a3c7f.png" />
 </div>
 </div>
 </section>
