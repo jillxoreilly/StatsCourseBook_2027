@@ -26,7 +26,8 @@ Any file that is an actual Jupyter Notebook can be opened automatically in Colab
 
 
 <br>
-```{image} https://raw.githubusercontent.com/jillxoreilly/StatsCourseBook_2024/main/images/MT_wk0_GoToColab.png
+
+```{image} https://raw.githubusercontent.com/jillxoreilly/StatsCourseBook_Resources/main/images/MT_wk0_GoToColab.png
 :width: 80%
 :align: center
 ```
@@ -36,7 +37,7 @@ Any file that is an actual Jupyter Notebook can be opened automatically in Colab
 
 <br>
 
-```{image} https://raw.githubusercontent.com/jillxoreilly/StatsCourseBook_2024/main/images/MT_wk0_Colab.png
+```{image} https://raw.githubusercontent.com/jillxoreilly/StatsCourseBook_Resources/main/images/MT_wk0_Colab.png
 :width: 80%
 :align: center
 ```
@@ -108,7 +109,7 @@ The file will be saved as **"Copy of ...**. for example if you download a file c
 
 ### Bonus
 
-There are several keyboard shortcuts that you might find useful when working with Jupyter notebooks
+There are several keyboard shortcuts that you might find useful when working with Jupyter notebooks on Colab
 
 * ` Ctrl + Enter ` or ` command + Enter ` : run the current cell
 * ` Ctrl + S ` or ` command + Enter ` : Save the notebook

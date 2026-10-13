@@ -22,9 +22,12 @@ First we will explore the Jupyter Notebook format using a ready made notebook "l
 
 These course notes are made up of some pages that are just text ("Markdown") and some that are actual Jupyter Notebooks.
 
-Any file that is an actual Jupyter Notebook can be opened automatically in Colab by clicking the little rocket button selecting **Colab**:
+Any file that is an actual Jupyter Notebook can be opened automatically in Colab by clicking the little rocket button selecting **Colab**. To try this out now, navigate to section **1.5 The FOR loop** and try to launch the notebook in Colab.
+
+
 <br>
-```{image} https://raw.githubusercontent.com/jillxoreilly/StatsCourseBook_2024/main/images/MT_wk0_GoToColab.png
+
+```{image} https://raw.githubusercontent.com/jillxoreilly/StatsCourseBook_Resources/main/images/MT_wk0_GoToColab.png
 :width: 80%
 :align: center
 ```
@@ -34,7 +37,7 @@ Any file that is an actual Jupyter Notebook can be opened automatically in Colab
 
 <br>
 
-```{image} https://raw.githubusercontent.com/jillxoreilly/StatsCourseBook_2024/main/images/MT_wk0_Colab.png
+```{image} https://raw.githubusercontent.com/jillxoreilly/StatsCourseBook_Resources/main/images/MT_wk0_Colab.png
 :width: 80%
 :align: center
 ```
@@ -42,7 +45,7 @@ Any file that is an actual Jupyter Notebook can be opened automatically in Colab
 
 ### Markdown cells
 
-Cells with text and images are called **Markdown** cells. *Markdown* refers to the codes we use to format the txet in these cells, for example headings are indicated by hashtags (one hash is the biggest heading, more hashes = smaller subheadings)
+Cells with text and images are called **Markdown** cells. *Markdown* refers to the codes we use to format the text in these cells, for example headings are indicated by hashtags (one hash is the biggest heading, more hashes = smaller subheadings)
 
 If you double-click a markdown cell, you can edit the text, and can also see these markdown symbols.
 
@@ -53,13 +56,13 @@ For your purposes, probably the only ones you need to know are:
 * Bold font is indicated by double-star \*\*text\*\* --> **text**
 * Italic font is indicated by single-star \*text\* --> *text*
 
-You can find examples of all of these in my example notebooks
+You can find examples of all of these in the example notebooks
 
 ### Code cells
 
 These contain Python code
 
-Note that any code preceded by a hashtag # is a **comment** -  explanatory text that is visible to human readers but is ignored by the computer
+Note that any code preceded by a hashtag # is a **comment** -  explanatory text that is visible to human readers but is ignored by the computer. In other words, when you are writing code, you will be switching back and forth between two languages Python -- so you can talk to the computer -- and English (or your written language of choice) so you can talk to yourself/tutor/anyone else who might be reading your code. Make sure the "non-computer" language is commented out or else you may get an error.
 
 * Sometimes I **comment out** code in notebooks that I don't want to automatically run - you can then **uncomment** it (by removing the hashtags at the start of the lines) when you are ready to run it.
 * The code block below is "commented out" - students are invited to think ahead about what the output of the code will be, before deleting the hashtags and running the code to check their answer.
@@ -102,7 +105,21 @@ Your files will be saved in your Google Drive (you would need to create one if y
 :align: center
 ```
 
-The file will be saved as **"Copy of ...**. for example if you download a file called **ExampleNotebook.ipynb**, it will be saved in your drive as **"Copy of ExampleNotebook.ipynbb**. You will therefore probably want to rename this file (click on the three dots by the file
+The file will be saved as **"Copy of ...**. for example if you download a file called **ExampleNotebook.ipynb**, it will be saved in your drive as **"Copy of ExampleNotebook.ipynbb**. You will therefore probably want to rename this file (click on the three dots by the file)
+
+### Bonus
+
+There are several keyboard shortcuts that you might find useful when working with Jupyter notebooks on Colab
+
+* ` Ctrl + Enter ` or ` command + Enter ` : run the current cell
+* ` Ctrl + S ` or ` command + Enter ` : Save the notebook
+
+when you are not currently editing a cell 
+
+* `A` will insert a cell above the one currently selected
+* `B` will insert a cell below the one currently selected
+
+to exit out of editing a cell use the `escape` key
 
 
 ## Exercise 2: Creating a New Notebook
@@ -135,6 +152,10 @@ You will need to copy this block into any new notebooks you create
 You are now ready to write so code. The first thing we will probably want to do is load in an example data file.
 
 ## Exercise 3: Load data
+
+This is a statistics course, so of course we will need to work with data files! Data files are a simple way of storing information -- for example, numbers from an experiment, survey responses, or health measurements -- in a structured format. Most often data is organised into rows and columns, where each row represents an observation, case, or participant and each column represents a variable or a measurements (e.g., age, response time, test score, BMI, Friendliness, political affiliation, etc.)
+
+You may be used to seeing data in files such as Excel spreadsheets, however, data are very often stored in text files such as **.csv** (comma separated values) files. This is a generic file type that can be read by Excel, Numbers, and by programming tools such as Python, R and Matlab.
 
     
 * From Canvas, download the example data file 'ExampleData.csv'
