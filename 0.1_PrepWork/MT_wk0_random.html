@@ -649,6 +649,7 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#simulated-coin-flip">1.8. Simulated coin flip</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#count-the-heads">1.8.1. Count the heads</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#double-loop">1.8.2. Double loop</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unpacking-the-double-loop">Unpacking the double loop</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comprehension-questions">Comprehension questions</a></li>
 </ul>
 </li>
@@ -720,7 +721,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
 </pre></div>
 </div>
 </div>
@@ -773,16 +774,16 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HEADS
-HEADS
-TAILS
-HEADS
-TAILS
-HEADS
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TAILS
 HEADS
 TAILS
 TAILS
 TAILS
+HEADS
+TAILS
+HEADS
+HEADS
+HEADS
 </pre></div>
 </div>
 </div>
@@ -812,8 +813,8 @@ TAILS
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>heads array: [1. 1. 1. 0. 1. 1. 1. 0. 1. 1.]
-sum = 8.0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>heads array: [1. 1. 0. 1. 1. 0. 0. 1. 0. 0.]
+sum = 5.0
 </pre></div>
 </div>
 </div>
@@ -866,18 +867,59 @@ sum = 8.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/e78a73e5b6e9deae236a09559837dcdba18c9b2114c58248feb579cb417deb48.png" src="../_images/e78a73e5b6e9deae236a09559837dcdba18c9b2114c58248feb579cb417deb48.png" />
+<img alt="../_images/b8b43472beeced1361f697e23c9fd469a80937f069f27f066d68ddacd34bab8e.png" src="../_images/b8b43472beeced1361f697e23c9fd469a80937f069f27f066d68ddacd34bab8e.png" />
 </div>
 </div>
 <p>Indeed, the expected outcomes of 4,5,6 are more likely than the extremes!</p>
+<section id="unpacking-the-double-loop">
+<h3>Unpacking the double loop<a class="headerlink" href="#unpacking-the-double-loop" title="Link to this heading">#</a></h3>
+<p>In the double loop there are two counter variables. Let’s make a new example with vaiables <code class="docutils literal notranslate"><span class="pre">s</span></code> and <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+<p>Let’s just look at how their values cycle round.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code> controls the inner loop, so it goes round fastest</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">m</span></code> controls the outer loop, so it only increases once <code class="docutils literal notranslate"><span class="pre">i</span></code> has done a full cycle of all its possible values</p></li>
+</ul>
+<p>As an analogy, <code class="docutils literal notranslate"><span class="pre">s</span></code> would be like the second hand on a clock and <code class="docutils literal notranslate"><span class="pre">m</span></code> would be like the minute hand. <code class="docutils literal notranslate"><span class="pre">m</span></code> only increases once <code class="docutils literal notranslate"><span class="pre">s</span></code> has gone all the way round.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">max_m</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="n">max_s</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_m</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_s</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;m=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;, s=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>m=0, s=0
+m=0, s=1
+m=0, s=2
+m=0, s=3
+m=0, s=4
+m=1, s=0
+m=1, s=1
+m=1, s=2
+m=1, s=3
+m=1, s=4
+m=2, s=0
+m=2, s=1
+m=2, s=2
+m=2, s=3
+m=2, s=4
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 <section id="comprehension-questions">
 <h3>Comprehension questions<a class="headerlink" href="#comprehension-questions" title="Link to this heading">#</a></h3>
-<p><strong>a. In the douple loop we have two counter variables, <tt>i</tt> and <tt>j</tt>…</strong></p>
+<p><strong>a. In the coin-tossing douple loop we have two counter variables, <code class="docutils literal notranslate"><span class="pre">i</span></code> and <code class="docutils literal notranslate"><span class="pre">j</span></code>…</strong></p>
 <ul class="simple">
 <li><p>Which counter variable keeps track of our position within the run of 10 coin tosses?</p></li>
 <li><p>Which counter variable keeps track of how many <em>repetitions</em> of the simulation we ran?</p></li>
 </ul>
-<p><strong>b. At the end of the simulation, what are the values of <tt>i</tt> and <tt>j</tt>?</strong></p>
+<p><strong>b. At the end of the simulation, what are the values of <code class="docutils literal notranslate"><span class="pre">i</span></code> and <code class="docutils literal notranslate"><span class="pre">j</span></code>?</strong></p>
 <ul class="simple">
 <li><p>Think then uncomment the code below and check!</p></li>
 </ul>
@@ -954,7 +996,8 @@ sum = 8.0
 
 
 
-<span class="c1"># plot the trajectory of the ball</span>
+<span class="c1"># the code below this point just plots the trajectory of the ball</span>
+<span class="c1"># please ignore as we will cover plotting in a later class</span>
 
 <span class="n">y</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="n">nPins</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># Set the Y Axis</span>
 
@@ -976,7 +1019,7 @@ sum = 8.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/fec4ec2e8e53567cca62965ad115ba477bdcfbc06531d4dd783c930320c75c56.png" src="../_images/fec4ec2e8e53567cca62965ad115ba477bdcfbc06531d4dd783c930320c75c56.png" />
+<img alt="../_images/cec58c4b456d9ebbe33c31e6600cdff07c88beab7c7182d27675bd6780c6bb2a.png" src="../_images/cec58c4b456d9ebbe33c31e6600cdff07c88beab7c7182d27675bd6780c6bb2a.png" />
 </div>
 </div>
 <p>If you run the code block above a few times, you should see the simulated trajectory change each time</p>
@@ -1043,7 +1086,7 @@ sum = 8.0
 <p>The point of the Galton Board is to release many balls and see where they are <strong>more likely</strong> to end up. To simulate this, we’ll add an outer loop that repeats our one-ball simulation many times and records each ball’s final horizontal bin (similar to the coin toss).</p>
 <p>If you’re feeling adventurous, try completing the outer loop yourself:</p>
 <ul class="simple">
-<li><p>Fill in the sections marked …</p></li>
+<li><p>Fill in the sections marked <code class="docutils literal notranslate"><span class="pre">......</span></code></p></li>
 <li><p>If you’d rather not, skip ahead to the pre-coded solution</p></li>
 </ul>
 <p><strong>What your code should do</strong></p>
@@ -1055,7 +1098,7 @@ sum = 8.0
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#reps = 40 # how mmny times will we repeat our single-ball simulation?</span>
-<span class="c1">#finalPos = ...... # array to store the final horiontal positions</span>
+<span class="c1">#finalPos = ...... # array to store the final horizontal positions</span>
 
 <span class="c1">#for j ......</span>
 <span class="c1">#    nPins=10</span>
@@ -1166,7 +1209,7 @@ sum = 8.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/91b49a5c37571ddfc7a29bb1cd6aae0ba76c33699f79474a33f2b242a19da632.png" src="../_images/91b49a5c37571ddfc7a29bb1cd6aae0ba76c33699f79474a33f2b242a19da632.png" />
+<img alt="../_images/13831c4563113b7af0f240a0f6d008c6561417269644405af53f5f4d87b97554.png" src="../_images/13831c4563113b7af0f240a0f6d008c6561417269644405af53f5f4d87b97554.png" />
 </div>
 </div>
 <p>The darker lines on the plot show where multiple balls have passed through the same path — these represent the most common trajectories.</p>
@@ -1188,7 +1231,7 @@ sum = 8.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/00ddd3769dc6af68b7ddf788e4c13211893efdb6b43acd0c053c1896eb346805.png" src="../_images/00ddd3769dc6af68b7ddf788e4c13211893efdb6b43acd0c053c1896eb346805.png" />
+<img alt="../_images/b56f85c3a7f8fceca3a22296e569b7b979df49d30908c921c5c0eb745caa11df.png" src="../_images/b56f85c3a7f8fceca3a22296e569b7b979df49d30908c921c5c0eb745caa11df.png" />
 </div>
 </div>
 </section>
@@ -1282,6 +1325,7 @@ sum = 8.0
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#simulated-coin-flip">1.8. Simulated coin flip</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#count-the-heads">1.8.1. Count the heads</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#double-loop">1.8.2. Double loop</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unpacking-the-double-loop">Unpacking the double loop</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comprehension-questions">Comprehension questions</a></li>
 </ul>
 </li>

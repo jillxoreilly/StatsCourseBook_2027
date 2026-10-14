@@ -648,6 +648,9 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-the-input-on-each-iteration">1.5.4. Changing the input on each iteration</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comprehension-question">Comprehension Question</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mix-it-up">1.5.5. Mix it up</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Comprehension Question</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automatically-set-number-of-iterations">Automatically set number of iterations</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Comprehension questions</a></li>
@@ -655,12 +658,12 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-the-output-on-each-iteration">1.5.5. Saving the output on each iteration</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-the-output-on-each-iteration">1.5.6. Saving the output on each iteration</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Comprehension questions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Comprehension questions</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-fibonacci-sequence">1.5.6. Exercise: Fibonacci Sequence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-fibonacci-sequence">1.5.7. Exercise: Fibonacci Sequence</a></li>
 </ul>
             </nav>
         </div>
@@ -723,8 +726,8 @@ hello!
 </div>
 <p>Although this worked well, you can imagine how difficult this might become if we want to extend this example to 10, 20, or even 1000 iterations. Instead of repeating code, we can get the computer to do this using a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop. The <code class="docutils literal notranslate"><span class="pre">for</span></code> loop will execute any command within, <strong>for</strong> as many times as you tell it to.</p>
 <ul class="simple">
-<li><p>The <code class="docutils literal notranslate"><span class="pre">for</span></code> loop is controlled by a <strong>counter variable</strong> in our case we are using a variable called <tt>i</tt>, but the name of this variable doesn’t really matter.</p></li>
-<li><p><tt>i</tt> counts how many times we have been round the loop (in this case, how many times we have said “hello”).</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">for</span></code> loop is controlled by a <strong>counter variable</strong> in our case we are using a variable called <code class="docutils literal notranslate"><span class="pre">i</span></code>, but the name of this variable doesn’t really matter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">i</span></code> counts how many times we have been round the loop (in this case, how many times we have said “hello”).</p></li>
 <li><p>When we have repeated the loop the required number of times, we stop</p></li>
 </ul>
 <p>Execute the code below and see if you get the same output</p>
@@ -743,13 +746,29 @@ hello!
 </div>
 </div>
 </div>
+<p>It may help you to understand what happened, if we ask the code to actually report the value of <code class="docutils literal notranslate"><span class="pre">i</span></code> each time we pass round the loop:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;i=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;, hello!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>i=0, hello!
+i=1, hello!
+i=2, hello!
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="comprehension-questions">
 <h2><span class="section-number">1.5.3. </span>Comprehension questions<a class="headerlink" href="#comprehension-questions" title="Link to this heading">#</a></h2>
 <p><strong>a. See if you can change the code above to say “hello” four times</strong></p>
 <section id="setting-the-number-of-iterations">
 <h3>Setting the number of iterations<a class="headerlink" href="#setting-the-number-of-iterations" title="Link to this heading">#</a></h3>
-<p>The number of <strong>iterations</strong> is the number of times we want to go round the loop. This is why  <tt>i</tt> is a common variale name for the iterations.</p>
+<p>The number of <strong>iterations</strong> is the number of times we want to go round the loop. This is why  <tt>i</tt> is a common name for the variable that counts the iterations.</p>
 <p>Imagine if we wanted to run the loop 100 times, it would be a bit annoying to write out all the values of <tt>i</tt> we want to use</p>
 <p><code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">[0,1,2,3,4,5,6</span> <span class="pre">.........</span> <span class="pre">100]</span></code></p>
 <p>luckily we can generate this list automatically using the function <code class="docutils literal notranslate"><span class="pre">range()</span></code></p>
@@ -821,7 +840,44 @@ Hello Craig!
 </div>
 </div>
 </div>
+<p>Again it may help you follow what is happening, to print out the value of <code class="docutils literal notranslate"><span class="pre">i</span></code> on each pass through the loop:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;i=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;. Hello &quot;</span> <span class="o">+</span> <span class="n">friends</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>i=0. Hello Alan!
+i=1. Hello Beth!
+i=2. Hello Craig!
+</pre></div>
+</div>
+</div>
+</div>
 </section>
+</section>
+<section id="mix-it-up">
+<h2><span class="section-number">1.5.5. </span>Mix it up<a class="headerlink" href="#mix-it-up" title="Link to this heading">#</a></h2>
+<p>You don’t have to print the list in order. What do you think will happen if we run the code blocks below?</p>
+<p>Have a think and then uncomment the code and run it to check your answer.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#for i in [2,0,1]:</span>
+<span class="c1">#    print(&quot;i=&quot; + str(i) + &quot;. Hello &quot; + friends[i] + &quot;!&quot;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#for i in [2,1]:</span>
+<span class="c1">#    print(&quot;i=&quot; + str(i) + &quot;. Hello &quot; + friends[i] + &quot;!&quot;)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <section id="id1">
 <h3>Comprehension Question<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p><strong>a. What would happen if I run the code block below?</strong></p>
@@ -851,7 +907,9 @@ Hello Craig!
 </div>
 </div>
 </div>
-<p>By combining this with range(), we make sure the loop runs exactly the right number of times — once for each item in the list. That way, even if the list gets longer or shorter, the loop will always adjust itself automatically.</p>
+<p>By combining this with range(), we make sure the loop runs exactly the right number of times — once for each item in the list. This is because <code class="docutils literal notranslate"><span class="pre">range(len(friends))</span></code>, which is the same as <code class="docutils literal notranslate"><span class="pre">range(3)</span></code> generates the exact set of value of <code class="docutils literal notranslate"><span class="pre">i</span></code> we would need, <code class="docutils literal notranslate"><span class="pre">[0,1,2]</span></code> if we were to list them manually:</p>
+<p><code class="docutils literal notranslate"><span class="pre">range(len(friends))</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">range(3)</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">[0,1,2]</span></code></p>
+<p>That way, even if the list gets longer or shorter, the loop will always adjust itself automatically.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">friends</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Alan&#39;</span><span class="p">,</span><span class="s1">&#39;Beth&#39;</span><span class="p">,</span><span class="s1">&#39;Craig&#39;</span><span class="p">]</span>
@@ -910,7 +968,7 @@ Hello Craig!
 </section>
 </section>
 <section id="saving-the-output-on-each-iteration">
-<h2><span class="section-number">1.5.5. </span>Saving the output on each iteration<a class="headerlink" href="#saving-the-output-on-each-iteration" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.5.6. </span>Saving the output on each iteration<a class="headerlink" href="#saving-the-output-on-each-iteration" title="Link to this heading">#</a></h2>
 <p>Sometimes we don’t just want to print an output to the screen — we might want to save the results so we can use them again later (for example, to make a graph or do further calculations).</p>
 <p>To do this, we need a place to collect our outputs as the loop runs. Earlier, we saw that a list in Python is an ordered collection of items, like names or numbers, written inside square brackets. Lists are very flexible, and we can add new items to them as we go.</p>
 <p>However, in scientific work we often deal with lots of numbers, and it’s useful to have a more powerful structure designed specifically for numerical data. This is where arrays from the library <code class="docutils literal notranslate"><span class="pre">numpy</span></code> come in. A <code class="docutils literal notranslate"><span class="pre">numpy</span> <span class="pre">array</span></code> works like a list, but with extra features that make it faster and better for mathematical operations.</p>
@@ -926,8 +984,10 @@ Hello Craig!
 <p><em>Note: we’ve added some text in the print command to make things more reader friendly</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># numbers to be squared</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
 
+<span class="c1"># square each one in turn and print output to screen</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
     <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39; squared is &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
 </pre></div>
@@ -944,10 +1004,56 @@ Hello Craig!
 </div>
 </div>
 </div>
-<p>We start by creating an arrray. Specifically, here the numbers betweens 0 and 5 are manually saved into the variable <tt>x</tt>. On each loop we call the value from position <tt>i</tt> in this array using the syntax: <code class="docutils literal notranslate"><span class="pre">x[i]</span></code></p>
-<ul class="simple">
-<li><p>Note the similarity to the syntax <code class="docutils literal notranslate"><span class="pre">friends[i]</span></code> in the loop above</p></li>
-</ul>
+<p>What just happened?</p>
+<p>We started by creating an input arrray <code class="docutils literal notranslate"><span class="pre">x</span></code> with the numbers to be squared. This is equivalent to the list of friends’ names in the previous example (<code class="docutils literal notranslate"><span class="pre">Alan,</span> <span class="pre">Bob...</span></code>)</p>
+<p>Then on each loop we call the value from position <code class="docutils literal notranslate"><span class="pre">i</span></code> in this array using the syntax: <code class="docutils literal notranslate"><span class="pre">x[i]</span></code> which is equiavlent to <code class="docutils literal notranslate"><span class="pre">friends[i]</span></code> in the previous loop.</p>
+<p><code class="docutils literal notranslate"><span class="pre">friends[2]</span></code> –&gt; Bob
+<code class="docutils literal notranslate"><span class="pre">x[5]</span></code> –&gt; 5</p>
+<p>This may be confusing because in the particular example <code class="docutils literal notranslate"><span class="pre">i</span></code> always has the same numerical value as <code class="docutils literal notranslate"><span class="pre">x[i]</span></code>, which you can see if you display both:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># numbers to be squared</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+
+<span class="c1"># square each one in turn and print output to screen</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;i=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;. &quot;</span> <span class="o">+</span> <span class="s2">&quot;x[i]=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;. &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39; squared is &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>i=0. x[i]=0. 0 squared is 0
+i=1. x[i]=1. 1 squared is 1
+i=2. x[i]=2. 2 squared is 4
+i=3. x[i]=3. 3 squared is 9
+i=4. x[i]=4. 4 squared is 16
+i=5. x[i]=5. 5 squared is 25
+</pre></div>
+</div>
+</div>
+</div>
+<p>It may help to consider an example where <code class="docutils literal notranslate"><span class="pre">i</span></code> and <code class="docutils literal notranslate"><span class="pre">x[i]</span></code> don’t happen to be the same:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># numbers to be squared</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">]</span>
+
+<span class="c1"># square each one in turn and print output to screen</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;i=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;. &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39; squared is &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>i=0. 10 squared is 100
+i=1. 11 squared is 121
+i=2. 12 squared is 144
+i=3. 13 squared is 169
+i=4. 14 squared is 196
+</pre></div>
+</div>
+</div>
+</div>
 <section id="id3">
 <h3>Comprehension questions<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <p><strong>a. What is <code class="docutils literal notranslate"><span class="pre">x[4]</span></code></strong></p>
@@ -962,7 +1068,9 @@ Hello Craig!
 </div>
 </div>
 </div>
-<p>Now instead of printing the numbers to the screen, we create an array to save them in using <code class="docutils literal notranslate"><span class="pre">np.zeros()</span></code>:</p>
+<p>Now, back to our objective to save the outputs in an array.</p>
+<p>Instead of printing the numbers to the screen, we create an array to save them in.</p>
+<p>First we create an empty array using <code class="docutils literal notranslate"><span class="pre">np.zeros()</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">squares</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
@@ -971,7 +1079,7 @@ Hello Craig!
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0. 0. 0. 0. 0. 0.]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0. 0. 0. 0. 0.]
 </pre></div>
 </div>
 </div>
@@ -1036,7 +1144,7 @@ Hello Craig!
 </section>
 </section>
 <section id="exercise-fibonacci-sequence">
-<h2><span class="section-number">1.5.6. </span>Exercise: Fibonacci Sequence<a class="headerlink" href="#exercise-fibonacci-sequence" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.5.7. </span>Exercise: Fibonacci Sequence<a class="headerlink" href="#exercise-fibonacci-sequence" title="Link to this heading">#</a></h2>
 <p>Let’s try out our newly learned skills by making a loop to generate the  Fibonacci sequence</p>
 <p>The Fibonacci Sequence is a sequence of numbers that begins [0,1,…] and continues by adding together the two previous numbers such that</p>
 <div class="math notranslate nohighlight">
@@ -1151,6 +1259,9 @@ Hello Craig!
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-the-input-on-each-iteration">1.5.4. Changing the input on each iteration</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comprehension-question">Comprehension Question</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mix-it-up">1.5.5. Mix it up</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Comprehension Question</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automatically-set-number-of-iterations">Automatically set number of iterations</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Comprehension questions</a></li>
@@ -1158,12 +1269,12 @@ Hello Craig!
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-the-output-on-each-iteration">1.5.5. Saving the output on each iteration</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-the-output-on-each-iteration">1.5.6. Saving the output on each iteration</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Comprehension questions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Comprehension questions</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-fibonacci-sequence">1.5.6. Exercise: Fibonacci Sequence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-fibonacci-sequence">1.5.7. Exercise: Fibonacci Sequence</a></li>
 </ul>
   </nav></div>
 

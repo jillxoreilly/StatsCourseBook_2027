@@ -644,6 +644,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#if-statement">1.6.3. IF statement</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#when-to-eat-shellfish">When to eat shellfish</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Comprehension</a></li>
 </ul>
 </li>
@@ -738,7 +739,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Try creating a variable called <tt>month</tt> and setting this to any string you like. To make sure this new variable works simply use the <code class="docutils literal notranslate"><span class="pre">print</span></code> function:</p>
+<p>Try creating a variable called <code class="docutils literal notranslate"><span class="pre">month</span></code> and setting this to any string you like. To make sure this new variable works simply use the <code class="docutils literal notranslate"><span class="pre">print</span></code> function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">month</span> <span class="o">=</span> <span class="s2">&quot;Eleventember&quot;</span>
@@ -752,7 +753,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Now check if the <tt>month</tt> contains an r. Change the value of <tt>month</tt> and rerun the code severak times to confirm you understand.</p>
+<p>Now check if the <code class="docutils literal notranslate"><span class="pre">month</span></code> contains an r. Change the value of <code class="docutils literal notranslate"><span class="pre">month</span></code> and rerun the code several times to confirm you understand.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">month</span> <span class="o">=</span> <span class="s2">&quot;Blue&quot;</span>
@@ -768,7 +769,7 @@ document.write(`
 </div>
 <p>To summarize, when you write the code <code class="docutils literal notranslate"><span class="pre">&quot;r&quot;</span> <span class="pre">in</span> <span class="pre">month</span></code> the value of this statement is a Boolean: i.e., either <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 <ul class="simple">
-<li><p>if there <strong>is</strong> an r in the string contained in the variable <tt>month</tt>, return <code class="docutils literal notranslate"><span class="pre">True</span></code></p></li>
+<li><p>if there <strong>is</strong> an r in the string contained in the variable <code class="docutils literal notranslate"><span class="pre">month</span></code>, return <code class="docutils literal notranslate"><span class="pre">True</span></code></p></li>
 <li><p>otherwise return <code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
 </ul>
 <section id="comprehension">
@@ -789,26 +790,14 @@ document.write(`
 </section>
 <section id="if-statement">
 <h2><span class="section-number">1.6.3. </span>IF statement<a class="headerlink" href="#if-statement" title="Link to this heading">#</a></h2>
-<p>As previously mentioned <code class="docutils literal notranslate"><span class="pre">if</span></code> statements will execute the code below when the condition of the if statment is True, you can combine this with an <code class="docutils literal notranslate"><span class="pre">else</span></code> statement or an else if (<code class="docutils literal notranslate"><span class="pre">elif</span></code>) to cover other possibilities. Specifically an <code class="docutils literal notranslate"><span class="pre">else</span></code> runs if none of the previous conditions were trye and <code class="docutils literal notranslate"><span class="pre">elif</span></code> lets you check for additional specific conditions.</p>
-<p>Try changing the <t>condition</t> variable below and see what happens:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">condition</span> <span class="o">=</span> <span class="kc">True</span>
-
-<span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You will only see this printed if the condition was True&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>You will only see this printed if the condition was True
-</pre></div>
-</div>
-</div>
-</div>
+<p>As previously mentioned, <code class="docutils literal notranslate"><span class="pre">if</span></code> statements will execute the code below when the condition of the if statment is True.</p>
+<p>You can combine this with an <code class="docutils literal notranslate"><span class="pre">else</span></code> statement or an else if (<code class="docutils literal notranslate"><span class="pre">elif</span></code>) to cover other possibilities.</p>
+<p>Specifically an <code class="docutils literal notranslate"><span class="pre">else</span></code> runs if none of the previous conditions were true and <code class="docutils literal notranslate"><span class="pre">elif</span></code> lets you check for additional specific conditions.</p>
+<p>Try changing the <code class="docutils literal notranslate"><span class="pre">condition</span></code> variable below from <code class="docutils literal notranslate"><span class="pre">False</span></code> to <code class="docutils literal notranslate"><span class="pre">True</span></code> and see what happens:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">condition</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;condition = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">condition</span><span class="p">))</span>
 
 <span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;here the condition was True&#39;</span><span class="p">)</span>
@@ -818,25 +807,59 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>here the condition was False
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>condition = False
+here the condition was False
 </pre></div>
 </div>
 </div>
 </div>
-<p>Next we can set up an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement to print different statements depending on whether there is an r in the name of the month</p>
+<p>Instead of just setting <code class="docutils literal notranslate"><span class="pre">condition</span></code> to True or False, we can make the condition depend on the truth of a statement</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">condition</span> <span class="o">=</span> <span class="mi">2</span><span class="o">+</span><span class="mi">2</span><span class="o">==</span><span class="mi">5</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;condition = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">condition</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>condition = False
+</pre></div>
+</div>
+</div>
+</div>
+<p>… and finally we can make an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement depend on the condition:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">2</span><span class="o">+</span><span class="mi">2</span><span class="o">==</span><span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;crikey&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;oh no it doesn&#39;t&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>oh no it doesn&#39;t
+</pre></div>
+</div>
+</div>
+</div>
+<section id="when-to-eat-shellfish">
+<h3>When to eat shellfish<a class="headerlink" href="#when-to-eat-shellfish" title="Link to this heading">#</a></h3>
+<p>Traditionally, you should not eat shellfish if there is an r in the month.</p>
+<p>We can set up an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement to print different statements depending on whether there is an r in the name of the month</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">month</span> <span class="o">=</span> <span class="s2">&quot;August&quot;</span>
 
 <span class="k">if</span> <span class="p">(</span><span class="s2">&quot;r&quot;</span> <span class="ow">in</span> <span class="n">month</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Don</span><span class="se">\&#39;</span><span class="s1">t eat shellfish in &#39;</span> <span class="o">+</span> <span class="n">month</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Do eat shellfish in &#39;</span> <span class="o">+</span> <span class="n">month</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Do eat shellfish in &#39;</span> <span class="o">+</span> <span class="n">month</span><span class="p">)</span>   
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Don</span><span class="se">\&#39;</span><span class="s1">t eat shellfish in &#39;</span> <span class="o">+</span> <span class="n">month</span><span class="p">)</span>   
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Do eat shellfish in August
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Don&#39;t eat shellfish in August
 </pre></div>
 </div>
 </div>
@@ -850,30 +873,31 @@ document.write(`
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">months</span><span class="p">)):</span> <span class="c1"># </span>
     <span class="k">if</span> <span class="p">(</span><span class="s2">&quot;r&quot;</span> <span class="ow">in</span> <span class="n">months</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span> 
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Don</span><span class="se">\&#39;</span><span class="s1">t eat shellfish in &#39;</span> <span class="o">+</span> <span class="n">months</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Do eat shellfish in &#39;</span> <span class="o">+</span> <span class="n">months</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Do eat shellfish in &#39;</span> <span class="o">+</span> <span class="n">months</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> 
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Don</span><span class="se">\&#39;</span><span class="s1">t eat shellfish in &#39;</span> <span class="o">+</span> <span class="n">months</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> 
         
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Don&#39;t eat shellfish in January
-Don&#39;t eat shellfish in February
-Don&#39;t eat shellfish in March
-Don&#39;t eat shellfish in April
-Do eat shellfish in May
-Do eat shellfish in June
-Do eat shellfish in July
-Do eat shellfish in August
-Don&#39;t eat shellfish in September
-Don&#39;t eat shellfish in October
-Don&#39;t eat shellfish in November
-Don&#39;t eat shellfish in Decemeber
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Do eat shellfish in January
+Do eat shellfish in February
+Do eat shellfish in March
+Do eat shellfish in April
+Don&#39;t eat shellfish in May
+Don&#39;t eat shellfish in June
+Don&#39;t eat shellfish in July
+Don&#39;t eat shellfish in August
+Do eat shellfish in September
+Do eat shellfish in October
+Do eat shellfish in November
+Do eat shellfish in Decemeber
 </pre></div>
 </div>
 </div>
 </div>
+</section>
 <section id="id1">
 <h3>Comprehension<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p><em>Lets break the code above and make sure you know what is happening. For each code chunk below try to guess what the result will be. Think first, then uncomment it and see if you are correct</em></p>
@@ -966,6 +990,7 @@ Don&#39;t eat shellfish in Decemeber
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#if-statement">1.6.3. IF statement</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#when-to-eat-shellfish">When to eat shellfish</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Comprehension</a></li>
 </ul>
 </li>
